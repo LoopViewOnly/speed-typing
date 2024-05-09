@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset=UTF-8>
+    <title>Loop Typing Speed Test</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel=icon href="loop_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans|Faster+One&display=swap' rel='stylesheet' type='text/css'>
+    <link rel=stylesheet type="text/css" href="style.css">
+    <script src="script.js" type="text/javascript" async=true></script>
+</head>
+
+<body>
+    <div id=left>&nbsp;</div>
+    <div id=all-outer>
+        <div id=all-inner>
+            <h1 class=tst>Typing Speed Test</h1>
+            <div class=nbsp>&nbsp;</div>
+            <div class=testui>
+                <input id=dummyinput>
+                <div id=border>
+                    <div id=score>
+                        <div style="display: none;"><span>Raw CPM:&nbsp;</span> <span id=rawcpm>?</span></div>
+                        <span id=highscore style="display:none"><span>Your best:</span> <span id=highcpm>?</span></span>
+                        <span>&nbsp;Corrected CPM:&nbsp;</span> <span id=cpm>?</span>
+                        <span>&nbsp;WPM:&nbsp;</span> <span id=wpm>?</span>
+                        <span>&nbsp;Time left:&nbsp;</span> <span id=timer>60</span>
+                        <span>&nbsp;<a href="/speed-typing" class="restart" target="_top">Restart</a></span>
+                    </div>
+                    <div id=wordsbox>
+                        <div id=words-outer>
+                            <div id=words onclick="el('input').focus();"></div>
+                        </div>
+                        <input id=input onkeydown="$speedtest.keydown(this, event);"
+                            onkeyup="$speedtest.keypress(this, event);" autocomplete=off autocapitalize=none
+                            spellcheck="false" autocorrect="off" placeholder="type the words here">
+                    </div>
+                </div>
+                <div class="logo-bottom-left">
+                    <img width="110px" src="looplogo.png" alt="Loop">
+                </div>
+</body>
