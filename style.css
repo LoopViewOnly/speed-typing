@@ -154,7 +154,7 @@ dd {
     height: 9ex;
     overflow: hidden;
     line-height: 3ex;
-    font-family: fira mono, dejavu sans mono, bitstream vera mono, consolas, lucida console, monospace
+    font-family: Arial, sans-serif;
 }
 
 #input {
